@@ -1,0 +1,35 @@
+{
+  "name": "sichuan-digital-twin-dashboard",
+  "version": "1.0.0",
+  "description": "A lightweight Sichuan digital twin operation dashboard with canvas map rendering, realtime simulation, bilingual documentation and zero runtime dependencies.",
+  "type": "module",
+  "private": false,
+  "scripts": {
+    "dev": "npx http-server . -c-1 -p 4173",
+    "preview": "npx http-server . -c-1 -p 4173",
+    "check": "node scripts/check-project.mjs"
+  },
+  "keywords": [
+    "digital-twin",
+    "dashboard",
+    "data-visualization",
+    "canvas",
+    "geojson",
+    "sichuan",
+    "smart-city",
+    "large-screen"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidsun1234/sichuan-digital-twin-dashboard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/davidsun1234/sichuan-digital-twin-dashboard/issues"
+  },
+  "homepage": "https://davidsun1234.github.io/sichuan-digital-twin-dashboard/"
+}

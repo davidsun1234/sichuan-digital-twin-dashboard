@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>川域智联运行孪生平台</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="workspace">
+    <section class="command-bar" aria-label="平台状态">
+      <div class="brand-lockup">
+        <div class="mark">川</div>
+        <div>
+          <p class="eyebrow">SICHUAN DIGITAL TWIN</p>
+          <h1>川域智联运行孪生平台</h1>
+        </div>
+      </div>
+      <div class="bar-metrics">
+        <div><span>在线站点</span><strong id="siteCount">1,286</strong></div>
+        <div><span>联动工单</span><strong id="ticketCount">473</strong></div>
+        <div><span>安全态势</span><strong>稳态</strong></div>
+      </div>
+      <time id="clock" class="clock">--:--:--</time>
+    </section>
+
+    <section class="hero-grid">
+      <aside class="left-rail">
+        <section class="panel slim">
+          <div class="panel-head"><span>能源供给</span><b>实时</b></div>
+          <div class="radial-wrap">
+            <canvas id="energyGauge" width="220" height="220" aria-label="能源供给仪表"></canvas>
+            <div class="radial-copy"><strong id="energyPercent">82.6%</strong><span>清洁能源占比</span></div>
+          </div>
+          <div class="mini-stack">
+            <div><span>风光出力</span><strong id="windPower">6.42GW</strong></div>
+            <div><span>储能响应</span><strong id="storageResponse">91ms</strong></div>
+          </div>
+        </section>
+
+        <section class="panel slim grow">
+          <div class="panel-head"><span>区域负载</span><b>TOP 5</b></div>
+          <div id="loadBars" class="load-bars"></div>
+        </section>
+      </aside>
+
+      <section class="map-stage" aria-label="四川运行孪生地图">
+        <canvas id="mapCanvas"></canvas>
+        <div class="map-hud top-left">
+          <span>孪生图层</span>
+          <strong>地市边界 / 线路脉冲 / 事件热度</strong>
+        </div>
+        <div class="map-hud bottom-right">
+          <span>当前聚焦</span>
+          <strong id="focusCity">成都市枢纽圈</strong>
+        </div>
+        <div id="tooltip" class="tooltip" hidden></div>
+      </section>
+
+      <aside class="right-rail">
+        <section class="panel incident-panel">
+          <div class="panel-head"><span>事件编排</span><b id="eventHealth">闭环率 96%</b></div>
+          <div id="eventList" class="event-list"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head"><span>服务质量</span><b>分钟级</b></div>
+          <div class="quality-grid">
+            <div><span>道路感知</span><strong>98.2</strong><em>分</em></div>
+            <div><span>水文预警</span><strong>7</strong><em>处</em></div>
+            <div><span>算力调度</span><strong>73</strong><em>%</em></div>
+            <div><span>应急资源</span><strong>184</strong><em>队</em></div>
+          </div>
+        </section>
+      </aside>
+    </section>
+
+    <section class="timeline-band" aria-label="运行时间轴">
+      <div class="timeline-title">
+        <span>跨域联动时间轴</span>
+        <strong id="timelineState">滚动推演中</strong>
+      </div>
+      <div id="timeline" class="timeline"></div>
+    </section>
+  </main>
+  <script src="./app.js" defer></script>
+</body>
+</html>
